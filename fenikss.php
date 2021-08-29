@@ -15,7 +15,7 @@ $gameIsLive = true;
 while($gameIsLive) {
     $bet = (int)readline("Enter bet amount (10, 20, 40, 80): ");
     if (!in_array($bet, $validBets)) {
-        echo "This is not a valid bet! Valid bets are $validBets[0], $validBets[1], $validBets[2], $validBets[3]";
+        echo "Bet not valid! Valid bets are $validBets[0], $validBets[1], $validBets[2], $validBets[3]" . PHP_EOL;
         continue;
     }
     $multiplier = $bet / 10;
