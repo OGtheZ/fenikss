@@ -95,6 +95,7 @@ while($gameIsLive) {
     if  ($cash < 1) {
         $gameIsLive = false;
         echo "Your balance has run out!" . PHP_EOL;
+        exit;
     }
     $playAgain = readline("Play again? (y/n)  ");
     if ($playAgain === 'n') {
