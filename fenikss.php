@@ -14,6 +14,10 @@ $gameIsLive = true;
 
 while($gameIsLive) {
     $bet = (int)readline("Enter bet amount (10, 20, 40, 80): ");
+    if ($bet < $cash) {
+        echo "Not enough balance for bet! Try sufficient amount!" . PHP_EOL;
+        continue;
+    }
     if (!in_array($bet, $validBets)) {
         echo "Bet not valid! Valid bets are $validBets[0], $validBets[1], $validBets[2], $validBets[3]" . PHP_EOL;
         continue;
